@@ -12,9 +12,14 @@ class AgendaController
     {
         require_once('module/site/view/agenda/index.php');
     }
-    
+
+    public function novo()
+    {
+        require_once('module/site/view/agenda/novo.php');
+    }
+
     public function error()
     {
-    	var_dump('error');
+    	exit('page dont found');
     }
 }

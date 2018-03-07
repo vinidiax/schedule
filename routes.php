@@ -13,6 +13,11 @@
       switch($controller) {
           case 'agenda':
               $controller = new AgendaController();
+              require_once('module/site/model/AgendaModel.php');
+              break;
+          case 'login':
+              $controller = new LoginController();
+              require_once('module/admin/model/LoginModel.php');
               break;
       }
 
@@ -20,7 +25,10 @@
   }
 
 
-  $controllers = array('agenda' => ['index', 'error']);
+    $controllers = array(
+        'agenda' => ['index','novo', 'error'],
+        'login'  => ['index' ,'error', 'logar', 'logout']
+    );
 
 
 

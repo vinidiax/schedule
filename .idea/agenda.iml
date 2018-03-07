@@ -4,5 +4,117 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHP" type="php">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../st2/vendor/aws/aws-sdk-php" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/aws/aws-sdk-php-zf2" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/bjyoungblood/bjy-profiler" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/composer" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/container-interop/container-interop" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/developercielo/api-3.0-php" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/guzzlehttp/guzzle" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/guzzlehttp/promises" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/guzzlehttp/psr7" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/kriansa/openboleto" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/mtdowling/jmespath.php" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/paragonie/random_compat" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/psr/container" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/psr/http-message" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-cache" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-captcha" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-code" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-component-installer" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-config" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-console" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-crypt" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-db" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-debug" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-developer-tools" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-escaper" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-eventmanager" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-filter" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-form" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-http" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-hydrator" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-i18n" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-inputfilter" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-json" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-loader" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-mail" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-math" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-mime" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-modulemanager" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-mvc" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-mvc-plugin-flashmessenger" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-paginator" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-router" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-server" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-servicemanager" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-session" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-soap" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-stdlib" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-uri" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-validator" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-view" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zfcampus/zf-console" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zfcampus/zf-development-mode" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../st2/vendor/aws/aws-sdk-php" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/aws/aws-sdk-php-zf2" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/bjyoungblood/bjy-profiler" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/composer" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/container-interop/container-interop" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/developercielo/api-3.0-php" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/guzzlehttp/guzzle" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/guzzlehttp/promises" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/guzzlehttp/psr7" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/kriansa/openboleto" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/mtdowling/jmespath.php" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/paragonie/random_compat" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/psr/container" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/psr/http-message" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-cache" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-captcha" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-code" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-component-installer" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-config" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-console" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-crypt" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-db" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-debug" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-developer-tools" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-escaper" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-eventmanager" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-filter" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-form" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-http" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-hydrator" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-i18n" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-inputfilter" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-json" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-loader" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-mail" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-math" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-mime" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-modulemanager" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-mvc" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-mvc-plugin-flashmessenger" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-paginator" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-router" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-server" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-servicemanager" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-session" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-soap" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-stdlib" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-uri" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-validator" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zendframework/zend-view" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zfcampus/zf-console" />
+          <root url="file://$MODULE_DIR$/../st2/vendor/zfcampus/zf-development-mode" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>
