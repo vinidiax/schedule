@@ -6,7 +6,6 @@
   <body>
     <header>
       <a href='/agenda'>Home</a>
-        <a href='?module=admin&controller=posts&action=index'>Admin</a>
     </header>
 
     <?php require_once('routes.php'); ?>

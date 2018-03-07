@@ -6,11 +6,10 @@
  * Time: 13:53
  */
 
-  function call($controller, $action) {
+  function call($module,$controller, $action) {
 
-      require_once('controller/' . $controller . '_controller.php');
-
-
+      require_once('module/'.$module.'/controller/' . $controller . 'Controller.php');
+	
       switch($controller) {
           case 'agenda':
               $controller = new AgendaController();
@@ -27,11 +26,11 @@
 
   if (array_key_exists($controller, $controllers)) {
       if (in_array($action, $controllers[$controller])) {
-          call($controller, $action);
+          call($module,$controller, $action);
       } else {
-          call('agenda', 'error');
+          call($module,'agenda', 'error');
       }
   } else {
-      call('agenda', 'error');
+      call($module,'agenda', 'error');
   }
 ?>
