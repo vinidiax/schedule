@@ -9,6 +9,7 @@
 
         <!-- Bootstrap -->
         <link href="public/css/bootstrap.min.css" rel="stylesheet">
+        <link href="public/css/style.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,7 +20,7 @@
     </head>
     <body>
 
-    <div class="container-fluid" style="background-color: #CCCCCC">
+    <div class="container-fluid" id="header">
         <div class="container">
 
             <nav class="navbar navbar-expand-sm navbar-light bg-faded">
@@ -34,7 +35,7 @@
                             <a class="nav-link" href="/">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Novo contato</a>
+                            <a class="nav-link" href="?module=site&controller=agenda&action=novo">Novo contato</a>
                         </li>
                     </ul>
 
@@ -55,6 +56,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="public/js/bootstrap.min.js"></script>
+        <script src="public/js/jquery.mask.js"></script>
+        <script src="public/js/jquery.validate.js"></script>
+        <script src="public/js/additional-methods.js"></script>
+        <script src="public/js/register.js"></script>
     </body>
 </html>
 

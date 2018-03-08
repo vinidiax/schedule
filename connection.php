@@ -23,8 +23,15 @@ class Db
     public static function getInstance()
     {
         if (!isset(self::$instance)) {
-           $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
-           self::$instance = new PDO('mysql:host=localhost;dbname=agenda','root','', $pdo_options);
+            $link = mysqli_connect("127.0.0.1", "root", "testesenha123", "agenda");
+
+            if (!$link) {
+                echo "Error: Unable to connect to MySQL." . PHP_EOL;
+                echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+                echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+                exit;
+            }else
+                self::$instance = $link;
         }
         return self::$instance;
     }

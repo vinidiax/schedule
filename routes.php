@@ -12,8 +12,10 @@
 	
       switch($controller) {
           case 'agenda':
-              $controller = new AgendaController();
               require_once('module/site/model/AgendaModel.php');
+
+              $model = new AgendaModel(Db::getInstance());
+              $controller = new AgendaController($model);
               break;
           case 'login':
               $controller = new LoginController();
@@ -26,7 +28,7 @@
 
 
     $controllers = array(
-        'agenda' => ['index','novo', 'error'],
+        'agenda' => ['index','novo', 'editar', 'delete', 'error'],
         'login'  => ['index' ,'error', 'logar', 'logout']
     );
 
