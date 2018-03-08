@@ -57,8 +57,8 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="public/js/bootstrap.min.js"></script>
         <script src="public/js/jquery.mask.js"></script>
-        <script src="public/js/jquery.validate.js"></script>
-        <script src="public/js/additional-methods.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
         <script src="public/js/register.js"></script>
     </body>
 </html>
