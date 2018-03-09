@@ -43,9 +43,13 @@
         </tr>
     </thead>
     <tbody>
-        <?php while($dados = $contatos->fetch_array()):?>
+        <?php
+            $cont = 0;
+            while($dados = $contatos->fetch_array()):
+                $cont++;
+        ?>
             <tr>
-                <th scope="col"> <?=$dados['contato_id']?> </th>
+                <th scope="col"> <?=$cont?> </th>
                 <td><?=$dados['contato_nome']?></td>
                 <td><?=AgendaModel::GENERO_DESCRICAO[$dados['contato_genero']]?></td>
                 <td><?=$dados['contato_email']?></td>
@@ -63,7 +67,7 @@
     </tbody>
     <tfoot>
         <tr>
-            <td colspan="6" align="right"><b>Total de registros: <?=$contatos->num_rows?></b></td>
+            <td colspan="7" align="right"><b>Total de registros: <?=$contatos->num_rows?></b></td>
         </tr>
     </tfoot>
 </table>

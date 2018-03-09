@@ -11,6 +11,7 @@ class LoginController
 
     public function __construct(LoginModel $model)
     {
+
         $this->_model = $model;
     }
 
@@ -33,7 +34,9 @@ class LoginController
             $acessou = $this->_model->validarLogin();
 
             if($acessou) {
-                var_dump('teste');
+                session_start();
+                $_SESSION['usuario'] = 'admin';
+
                 header("Location:?module=admin&controller=dashboard&action=index");
             }else
                 $menssagemErro = 'Usuário ou senha incorretos';
@@ -45,7 +48,10 @@ class LoginController
 
     public function logout()
     {
-        exit('aloi');
+        session_start();
+        session_unset();
+        session_destroy();
+        header('Location:/');
     }
 
     public function error()

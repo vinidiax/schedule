@@ -16,6 +16,11 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="public/js/bootstrap.min.js"></script>
+    <script src="public/js/jquery.mask.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
     <style>
 
         body, html {
@@ -33,7 +38,8 @@
     <div class="row h-100">
         <div class="col-2 collapse d-md-flex bg-light pt-2 h-100" id="sidebar">
             <ul class="nav flex-column flex-nowrap">
-                <li class="nav-item"><a class="nav-link" href="#">Estatísticas</a></li>
+                <li class="nav-item"><a class="nav-link" href="?module=admin&controller=dashboard&action=index">Estatísticas</a></li>
+                <li class="nav-item"><a class="nav-link" href="?module=admin&controller=login&action=logout">Sair</a></li>
             </ul>
         </div>
         <div class="col pt-2">
@@ -42,12 +48,7 @@
     </div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="public/js/bootstrap.min.js"></script>
-<script src="public/js/jquery.mask.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
-<script src="public/js/dashboard.js"></script>
+
 </body>
 </html>
 

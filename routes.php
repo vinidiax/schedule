@@ -43,7 +43,7 @@
     $controllers = array(
         'agenda' => ['index','novo', 'editar', 'delete', 'error'],
         'login'  => ['index' ,'error', 'logar', 'logout'],
-        'dashboard' => ['index','error']
+        'dashboard' => ['index','error', 'graficoGenero']
     );
 
 

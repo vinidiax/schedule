@@ -116,7 +116,7 @@ class AgendaModel
 
     public function all() {
 
-        $sql = $this->_db->query("SELECT contato_id, contato_nome, contato_telefone, contato_celular, contato_email, contato_genero FROM contato");
+        $sql = $this->_db->query("SELECT contato_id, contato_nome, contato_telefone, contato_celular, contato_email, contato_genero FROM contato  ORDER BY contato_nome ASC");
         if ($sql) {
             return $sql;
         }
@@ -137,7 +137,9 @@ class AgendaModel
                   contato_email as email,
                   contato_genero as genero 
                 FROM contato 
-                WHERE contato_id = {$id}");
+                WHERE contato_id = {$id}
+                ORDER BY contato_nome ASC
+        ");
 
         if($sql) {
             return $sql->fetch_array();
