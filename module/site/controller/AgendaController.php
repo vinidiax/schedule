@@ -20,14 +20,15 @@ class AgendaController
         return $this->_model->all();
     }
 
-    public function adicionarContato($nome, $email, $telefone, $celular)
+    public function adicionarContato($nome, $email, $telefone, $celular, $genero)
     {
 
         $postData = [
             'nome' => $nome,
             'email' => $email,
             'telefone' => $telefone,
-            'celular' => $celular
+            'celular' => $celular,
+            'genero' => $genero
 
         ];
 
@@ -38,6 +39,7 @@ class AgendaController
             $this->_model->setEmail($postData['email']);
             $this->_model->setTelefone(preg_replace('/[^0-9]/', '', $postData['telefone']));
             $this->_model->setCelular(preg_replace('/[^0-9]/', '', $postData['celular']));
+            $this->_model->setGenero($postData['genero']);
             $saved = $this->_model->save();
 
             return $saved;
@@ -48,14 +50,15 @@ class AgendaController
 
     }
 
-    public function editarContato($id, $nome, $email, $telefone, $celular)
+    public function editarContato($id, $nome, $email, $telefone, $celular, $genero)
     {
 
         $postData = [
             'nome' => $nome,
             'email' => $email,
             'telefone' => $telefone,
-            'celular' => $celular
+            'celular' => $celular,
+            'genero' => $genero
         ];
 
         $dadosVerificados = $this->_verificarDadosParaInserir($postData);
@@ -67,6 +70,7 @@ class AgendaController
             $this->_model->setEmail($postData['email']);
             $this->_model->setTelefone(preg_replace('/[^0-9]/', '', $postData['telefone']));
             $this->_model->setCelular(preg_replace('/[^0-9]/', '', $postData['celular']));
+            $this->_model->setGenero($postData['genero']);
             $saved = $this->_model->update();
 
             return $saved;
@@ -114,7 +118,7 @@ class AgendaController
 
             $postData = $_POST;
 
-            $saved = $this->adicionarContato($postData['nome'],$postData['email'],$postData['telefone'], $postData['celular']);
+            $saved = $this->adicionarContato($postData['nome'],$postData['email'],$postData['telefone'], $postData['celular'], $postData['genero']);
 
             if( !is_bool($saved)) {
                 $dadosVerificados = $saved;
@@ -145,7 +149,7 @@ class AgendaController
 
                 $postData = $_POST;
 
-                $saved = $this->editarContato( $id, $postData['nome'],$postData['email'],$postData['telefone'], $postData['celular']);
+                $saved = $this->editarContato( $id, $postData['nome'],$postData['email'],$postData['telefone'], $postData['celular'], $postData['genero']);
 
                 if(!is_bool($saved)) {
                     $dadosVerificados = $saved;

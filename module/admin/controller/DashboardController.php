@@ -17,6 +17,7 @@ class DashboardController
     public function index()
     {
 
+
         require_once('module/admin/view/dashboard/index.php');
     }
 

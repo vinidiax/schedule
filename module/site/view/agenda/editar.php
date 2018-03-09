@@ -3,6 +3,7 @@
     $email      = isset($postData['email']) ? $postData['email'] : '';
     $telefone   = isset($postData['telefone']) ? $postData['telefone'] : '';
     $celular    = isset($postData['celular']) ? $postData['celular'] : '';
+    $genero     = isset($postData['genero']) ? $postData['genero'] : '';
 
 if(!is_bool($dadosVerificados)) :
     ?>
@@ -27,6 +28,16 @@ endif;
     <label for="nome">Nome</label>
     <div class="input-group mb-3">
         <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome" value="<?=$nome?>" required>
+    </div>
+
+    <label for="nome">Gênero</label>
+    <div class="input-group mb-3">
+        <select name="genero" required class="form-control">
+            <option value="">== Selecione ==</option>
+            <option value="1" <?=$genero == 1 ? 'selected' : ''?>>Masculino</option>
+            <option value="2" <?=$genero == 2 ? 'selected' : ''?>>Feminino</option>
+        </select>
+
     </div>
 
     <label for="email">E-mail</label>

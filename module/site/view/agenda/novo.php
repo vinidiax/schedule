@@ -28,6 +28,16 @@ endif;
         <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome" value="<?=$nome?>" required>
     </div>
 
+    <label for="nome">Gênero</label>
+    <div class="input-group mb-3">
+        <select name="genero" required class="form-control">
+            <option value="">== Selecione ==</option>
+            <option value="1">Masculino</option>
+            <option value="2">Feminino</option>
+        </select>
+
+    </div>
+
     <label for="email">E-mail</label>
     <div class="input-group mb-3">
         <input type="text" class="form-control" name="email" id="email" placeholder="E-mail" value="<?=$email?>" aria-describedby="basic-addon2" onblur="isEmail(this.value)">

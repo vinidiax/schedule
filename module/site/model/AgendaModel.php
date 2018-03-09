@@ -4,8 +4,15 @@ class AgendaModel
 {
     // we define 3 attributes
     // they are public so that we can access them using $post->author directly
+
+    const GENERO_DESCRICAO = [
+        1 => 'Masculino',
+        2 => 'Feminino'
+    ];
+
     private $id;
     private $nome;
+    private $genero;
     private $telefone;
     private $celular;
     private $email;
@@ -15,6 +22,16 @@ class AgendaModel
     public function __construct($db)
     {
         $this->_db = $db;
+    }
+
+    public function getGenero()
+    {
+        return $this->genero;
+    }
+
+    public function setGenero($genero)
+    {
+        $this->genero = $genero;
     }
 
     /**
@@ -99,7 +116,7 @@ class AgendaModel
 
     public function all() {
 
-        $sql = $this->_db->query("SELECT contato_id, contato_nome, contato_telefone, contato_celular, contato_email FROM contato");
+        $sql = $this->_db->query("SELECT contato_id, contato_nome, contato_telefone, contato_celular, contato_email, contato_genero FROM contato");
         if ($sql) {
             return $sql;
         }
@@ -117,7 +134,8 @@ class AgendaModel
                   contato_nome as nome, 
                   contato_telefone as telefone, 
                   contato_celular as celular, 
-                  contato_email as email 
+                  contato_email as email,
+                  contato_genero as genero 
                 FROM contato 
                 WHERE contato_id = {$id}");
 
@@ -134,13 +152,14 @@ class AgendaModel
 
         $sql    = $this->_db->query(
                 "INSERT INTO contato 
-                 (contato_nome, contato_telefone, contato_celular, contato_email)
+                 (contato_nome, contato_telefone, contato_celular, contato_email, contato_genero)
                  VALUES
                       (
                        '{$this->getNome()}',
                        '{$this->getTelefone()}',
                        '{$this->getCelular()}',
-                       '{$this->getEmail()}'   
+                       '{$this->getEmail()}',
+                       {$this->getGenero()}   
                       )"
         );
         $return = $sql;
@@ -156,7 +175,8 @@ class AgendaModel
                         contato_nome      = '{$this->getNome()}',
                         contato_telefone  = '{$this->getTelefone()}',
                         contato_celular   = '{$this->getCelular()}',
-                        contato_email     = '{$this->getEmail()}'   
+                        contato_email     = '{$this->getEmail()}',
+                        contato_genero    = {$this->getGenero()}      
                     WHERE
                       contato_id = {$this->getId()}"
         );
