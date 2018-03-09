@@ -6,10 +6,10 @@
  * Time: 09:08
  */
 
-class LoginController
+class DashboardController
 {
 
-    public function __construct(LoginModel $model)
+    public function __construct(DashboardModel $model)
     {
         $this->_model = $model;
     }
@@ -17,7 +17,7 @@ class LoginController
     public function index()
     {
 
-        require_once('module/admin/view/login/index.php');
+        require_once('module/admin/view/dashboard/index.php');
     }
 
     public function logar()

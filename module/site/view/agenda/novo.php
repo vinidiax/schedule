@@ -17,12 +17,17 @@ endif;
     endif;
 
 ?>
+<div class="alert-danger alert" id="validate"></div>
+
 <h3>Adicionar contato:</h3>
+
 <form action="?module=site&controller=agenda&action=novo" method="post" id="register-form">
+
     <label for="nome">Nome</label>
     <div class="input-group mb-3">
-        <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome" value="<?=$nome?>">
+        <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome" value="<?=$nome?>" required>
     </div>
+
     <label for="email">E-mail</label>
     <div class="input-group mb-3">
         <input type="text" class="form-control" name="email" id="email" placeholder="E-mail" value="<?=$email?>" aria-describedby="basic-addon2" onblur="isEmail(this.value)">

@@ -41,8 +41,8 @@
 
                     <!-- Search -->
                     <form action="?module=admin&controller=login&action=logar" class="form-inline" role="login" method="post">
-                        <input type="text" class="form-control" placeholder="E-mail">
-                        <input type="password" class="form-control" placeholder="Senha">
+                        <input type="text" class="form-control" placeholder="E-mail" name="usuario" required>
+                        <input type="password" class="form-control" placeholder="Senha" name="senha" required>
                         <button type="submit" class="btn btn-secondary">Entrar</button>
                     </form>
             </nav>

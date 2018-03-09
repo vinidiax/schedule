@@ -14,3 +14,7 @@ CREATE TABLE usuario (
   PRIMARY KEY (usuario_id)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
+
+--SENHA 123456
+INSERT INTO usuario (usuario_login, usuario_senha) VALUES ('admin', 'e10adc3949ba59abbe56e057f20f883e');
+

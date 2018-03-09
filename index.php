@@ -18,8 +18,9 @@
     }
 
     if ($controller == 'login') {
-        require_once('module/admin/view/login/index.php');
-    } else {
+        require_once('routes.php');
+    }
+    else {
         require_once('module/'.$module.'/view/layout.php');
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-class LoginModel
+class DashboardModel
 {
     // we define 3 attributes
     // they are public so that we can access them using $post->author directly
