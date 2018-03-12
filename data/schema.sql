@@ -5,6 +5,7 @@ CREATE TABLE contato (
   contato_celular varchar(11) DEFAULT NULL,
   contato_email varchar(128) DEFAULT NULL,
   contato_genero INT(11) NOT NULL,
+  contato_registro datetime NOT NULL
   PRIMARY KEY (contato_id)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 

@@ -3,7 +3,7 @@ img {
     height:16px;
 }
 
-#header {
+.header {
     background-color: #CCCCCC;
     margin-bottom: 10px;
 }

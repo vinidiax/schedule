@@ -26,12 +26,12 @@ class AgendaModel
 
     public function getGenero()
     {
-        return $this->genero;
+        return mysqli_escape_string($this->_db, $this->genero);
     }
 
     public function setGenero($genero)
     {
-        $this->genero = $genero;
+        $this->genero = mysqli_escape_string($this->_db, $genero);
     }
 
     /**
@@ -39,7 +39,7 @@ class AgendaModel
      */
     public function getId()
     {
-        return $this->id;
+        return (int)mysqli_escape_string($this->_db, $this->id);
     }
 
     /**
@@ -47,7 +47,7 @@ class AgendaModel
      */
     public function setId($id)
     {
-        $this->id = $id;
+        $this->id = mysqli_escape_string($this->_db, $id);
     }
 
     /**
@@ -55,7 +55,7 @@ class AgendaModel
      */
     public function getNome()
     {
-        return $this->nome;
+        return mysqli_escape_string($this->_db, $this->nome);
     }
 
     /**
@@ -63,7 +63,7 @@ class AgendaModel
      */
     public function setNome($nome)
     {
-        $this->nome = $nome;
+        $this->nome = mysqli_escape_string($this->_db, $nome);
     }
 
     /**
@@ -71,7 +71,7 @@ class AgendaModel
      */
     public function getTelefone()
     {
-        return $this->telefone;
+        return mysqli_escape_string($this->_db, $this->telefone);
     }
 
     /**
@@ -79,7 +79,7 @@ class AgendaModel
      */
     public function setTelefone($telefone)
     {
-        $this->telefone = $telefone;
+        $this->telefone = mysqli_escape_string($this->_db, $telefone);
     }
 
     /**
@@ -87,7 +87,7 @@ class AgendaModel
      */
     public function getCelular()
     {
-        return $this->celular;
+        return mysqli_escape_string($this->_db, $this->celular);
     }
 
     /**
@@ -95,7 +95,7 @@ class AgendaModel
      */
     public function setCelular($celular)
     {
-        $this->celular = $celular;
+        $this->celular = mysqli_escape_string($this->_db, $celular);
     }
 
     /**
@@ -103,7 +103,7 @@ class AgendaModel
      */
     public function getEmail()
     {
-        return $this->email;
+        return mysqli_escape_string($this->_db, $this->email);
     }
 
     /**
@@ -111,7 +111,7 @@ class AgendaModel
      */
     public function setEmail($email)
     {
-        $this->email = $email;
+        $this->email = mysqli_escape_string($this->_db, $email);
     }
 
     public function all() {
@@ -126,7 +126,7 @@ class AgendaModel
     }
     public function find($id) {
 
-        $id = (int)$id;
+        $id = (int)mysqli_escape_string($this->_db,$id);
 
         $sql = $this->_db->query("
                 SELECT 
@@ -152,21 +152,23 @@ class AgendaModel
     public function save()
     {
 
+        $dataRegistro = date('Y-m-d H:i:s');
+
         $sql    = $this->_db->query(
                 "INSERT INTO contato 
-                 (contato_nome, contato_telefone, contato_celular, contato_email, contato_genero)
+                 (contato_nome, contato_telefone, contato_celular, contato_email, contato_genero, contato_registro)
                  VALUES
                       (
                        '{$this->getNome()}',
                        '{$this->getTelefone()}',
                        '{$this->getCelular()}',
                        '{$this->getEmail()}',
-                       {$this->getGenero()}   
+                       {$this->getGenero()},
+                       '{$dataRegistro}'   
                       )"
         );
-        $return = $sql;
 
-        return $return;
+        return $sql;
     }
 
     public function update()
@@ -182,9 +184,9 @@ class AgendaModel
                     WHERE
                       contato_id = {$this->getId()}"
         );
-        $return = $sql;
 
-        return $return;
+
+        return $sql;
     }
 
     public function delete()
@@ -196,25 +198,25 @@ class AgendaModel
 
     public function search($postData)
     {
-        $sql    =   "SELECT contato_id, contato_nome, contato_telefone, contato_celular, contato_email FROM contato ";
+        $sql    =   "SELECT contato_id, contato_nome, contato_telefone, contato_celular, contato_email, contato_genero FROM contato ";
 
         $where = 'WHERE 1=1 ';
 
         if($postData['nome'] != '') {
-            $where .= " AND contato_nome LIKE '%{$postData['nome']}%'";
+            $where .= " AND contato_nome LIKE '%".mysqli_escape_string($this->_db,$postData['nome'])."%'";
         }
 
         if($postData['email'] != '') {
-            $where .= " AND contato_email LIKE '%{$postData['email']}%'";
+            $where .= " AND contato_email LIKE '%".mysqli_escape_string($this->_db,$postData['email'])."%'";
         }
 
         if($postData['telefone'] != '') {
-            $telefone = preg_replace('/[^0-9]/', '',$postData['telefone']);
+            $telefone = preg_replace('/[^0-9]/', '',mysqli_escape_string($this->_db,$postData['telefone']));
             $where .= " AND contato_telefone LIKE '%{$telefone}%'";
         }
 
         if($postData['celular'] != '') {
-            $celular = preg_replace('/[^0-9]/', '',$postData['celular']);
+            $celular = preg_replace('/[^0-9]/', '',mysqli_escape_string($this->_db,$postData['celular']));
             $where .= " AND contato_celular LIKE '%{$celular}%'";
         }
 
